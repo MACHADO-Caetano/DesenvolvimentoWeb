@@ -3,7 +3,7 @@
     "description": "Orientação a Objetos",
     "autoload": {
         "psr-4": {
-            "Usuario\\OrientacaoObjetos\\": "src/"
+            "OrientacaoObjetos\\": "src/"
         }
     },
     "authors": [
