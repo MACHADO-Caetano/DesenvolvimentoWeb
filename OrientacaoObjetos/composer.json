@@ -1,0 +1,16 @@
+{
+    "name": "usuario/orientacao-objetos",
+    "description": "Orientação a Objetos",
+    "autoload": {
+        "psr-4": {
+            "Usuario\\OrientacaoObjetos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MACHADO-Caetano",
+            "email": "machadocaetano@rede.ulbra.br"
+        }
+    ],
+    "require": {}
+}

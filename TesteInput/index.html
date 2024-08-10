@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste INPUT</title>
+</head>
+<style>
+    .centralizar{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+    }
+</style>
+<body class="centralizar">
+    <div>
+        <h1>Teste de Input</h1>
+    </div>
+    <form action="back.php" method="post">
+        <label for="numero_um">Inserir um primeiro número: </label>
+        <input type="text" id="numero_um" name="numero_um"><br>
+        <label for="numero_dois">Inserir um segundo número: </label>
+        <input type="text" id="numero_dois" name="numero_dois"><br>
+        <label for="operacao">Definir operação: </label>
+        <input type="text" id="operacao" name="operacao">
+        <input type="submit" value="Enviar">
+    </form>
+    
+</body>
+</html>
