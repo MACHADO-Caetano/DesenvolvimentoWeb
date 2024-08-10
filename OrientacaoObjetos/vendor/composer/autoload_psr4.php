@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'OrientacaoObjetos\\' => array($baseDir . '/src'),
+    'Usuario\\OrientacaoObjetos\\' => array($baseDir . '/src'),
 );

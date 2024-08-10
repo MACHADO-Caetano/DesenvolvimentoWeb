@@ -1,9 +1,8 @@
 {
     "name": "usuario/orientacao-objetos",
-    "description": "Orientação a Objetos",
     "autoload": {
         "psr-4": {
-            "OrientacaoObjetos\\": "src/"
+            "Usuario\\OrientacaoObjetos\\": "src/"
         }
     },
     "authors": [
