@@ -33,13 +33,14 @@ class Produto
         return $produtos;
     }
 
-    public function Insert(string $descricao):int
+    public function Insert(string $desc):int
     {
-        $sql = 'insert into produtos(descricao) values(?)';
+
+        $sql = 'insert into produtos(descricao) values (?)';
 
         $prepare = $this->connection->prepare($sql);
+        $prepare->bind_param('s', $desc);
 
-        $prepare->bind_param('s', $descricao);
         $prepare->execute();
 
         return $prepare->affected_rows;
@@ -47,12 +48,12 @@ class Produto
 
     public function Update(string $descricao, int $id):int
     {
-        $sql = 'update produtos set descricao = ? where id = ?';
+        $sql = 'update produtos set descricao = (?) where id = (?)';
 
         $prepare = $this->connection->prepare($sql);
 
-        $prepare->bind_param('s', $descricao);
-        $prepare->bind_param('i', $id);
+        $prepare->bind_param('si',$descricao, $id);
+        //$prepare->bind_param('s', $descricao);
 
         $prepare->execute();
 
@@ -66,6 +67,16 @@ class Produto
         $prepare = $this->connection->prepare($sql);
 
         $prepare->bind_param('i', $id);
+        $prepare->execute();
+
+        return $prepare->affected_rows;
+    }
+
+    public function resetTable():int
+    {
+        $sql = 'alter table produtos AUTO_INCREMENT = 1;';
+
+        $prepare = $this->connection->prepare($sql);
         $prepare->execute();
 
         return $prepare->affected_rows;
