@@ -14,3 +14,4 @@ Route::post('/car', [CarController::class,'criar']);
 Route::put('/car/{id}', [CarController::class,'editar']);
 Route::delete('/car/{id}', [CarController::class,'remover']);
 
+// Prova concluída
