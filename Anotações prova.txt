@@ -1,0 +1,33 @@
+Anotações prova
+
+primeiros passos - criação normal do processo
+
+iniciar um projeto laravel conforme artigo
+
+criar as estruturas: php artisan make:model NomeModel -mc
+
+buscar estruturas nos códigos antigos
+
+
+abrir model, colocar 'image'
+
+migration tipo text('image')
+
+terminal: php artisan storage:link
+
+diretorios: storage/app/public
+
+navegador: form multpart html (link stack overflow). colocar trecho de código em create.blade.php, no formulário, e no edit também
+
+navegador: upload image web laravel 11 médium
+
+se necessário, alterar na controller, na store, a coluna 'image' > 'required|image|mimes: jpeg, png, jpg, gif, webp|mas:2048
+
+se erro na coluna imagem, executar no bash: php artisan migrate:fresh
+
+https://github.com/lucassaraiva5/projeto-pokemon-laravel/tree/main
+
+
+
+
+
